@@ -1,9 +1,8 @@
-# Define the attacker and defender teams.
 from src.Analysis import analyseStability
 from src.Simulation import Simulation, Side
 
 print('Notations (1) - Positions: 12345, Y: Yukari, F: Front, M: Middle, B: Back, X: Any.')
-print('Notations (2) - PY: Position Y (Y = 1 to 5), AR: Attack Range, TPB: TP Boost')
+print('Notations (2) - P(1 -5): Position (from  1 to 5), AR: Attack Range, TPB: TP Boost')
 print('Format: (case index) - (positions) = (position TP boosted) / (conditions) \n')
 
 simulObj = Simulation()
@@ -87,6 +86,7 @@ simulObj.setAttackerTeam(['Miyako','Shizuru','Yukari','Maho','Kyoka'])
 simulObj.execute()
 TPBoostedUnit = simulObj.getHighestTPUnit(Side.ATTACKER)
 
+assert TPBoostedUnit.name == 'Yukari'
 
 #####################################
 #       YUKARI POSITION 4 CASES     #
@@ -162,4 +162,4 @@ TPBoostedUnit = simulObj.getHighestTPUnit(Side.ATTACKER)
 
 assert TPBoostedUnit.name == 'Yukari'
 
-
+print('* Not fully stable if Lima (but very, very edge cases).')
