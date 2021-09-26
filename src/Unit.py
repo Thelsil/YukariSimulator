@@ -228,6 +228,7 @@ unitsRange = {
     "Mifuyu": 420,
     "Illya": 425,
     "Saren": 430,
+    "H.Shinobu":440,
     "Anna": 440,
     "S.Miyufu": 495,
     "Kokkoro": 500,
